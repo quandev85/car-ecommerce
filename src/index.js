@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
@@ -7,6 +8,9 @@ const compression = require("compression");
 app.use(morgan("dev"));
 app.use(helmet());
 app.use(compression());
+// db
+
+require("./db/init.mongo");
 
 // router
 app.use("/", require("./routes/index"));
