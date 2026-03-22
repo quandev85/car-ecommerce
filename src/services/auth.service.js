@@ -1,0 +1,3 @@
+class AuthService {
+  register = async () => {};
+}

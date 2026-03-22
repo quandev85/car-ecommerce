@@ -13,6 +13,6 @@ app.use(compression());
 require("./db/init.mongo");
 
 // router
-app.use("/", require("./routes/index"));
+app.use("/api/v1", require("./routes/index"));
 
 module.exports = app;
